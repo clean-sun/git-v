@@ -8,7 +8,7 @@ jobs:
       - name: Create New User and Enable RDP
         shell: pwsh
         run: |
-          $Password = ConvertTo-SecureString "Password1234" -AsPlainText -Force
+          $Password = ConvertTo-SecureString "Password111" -AsPlainText -Force
           New-LocalUser -Name "Username" -Password $Password -FullName "Full Name" -Description "Description"
           
           Add-LocalGroupMember -Group "Administrators" -Member "Username"
